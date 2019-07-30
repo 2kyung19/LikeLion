@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wordcount:result</title>
+    {% include 'include/bootstrap.html' %}
+</head>
+
+<body>
+    {% include 'include/nav.html' %}
+    <div class="container">
+    <div class="main">
+        <h1>당신이 입력한 텍스트는 {{ total }}개의 단어로 구성되어 있습니다.</h1>
+
+        <br>
+        &nbsp;<a href="{% url 'wordcount' %}"> 다시하기 </a>
+        <br><br>
+
+        <h2>입력한 텍스트 : </h2>
+        {{ full }}
+
+        <br><br>
+
+        <h2> 단어 카운트 : </h2>
+        {% for word, num in dictionary %}
+            {{ word }}: {{ num }}
+            <br>
+        {%  endfor %}
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>guest</title>
+    {% include 'include/bootstrap.html' %}
+</head>
+<body>
+    {% include 'include/nav.html' %}
+    <div class="container">
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                {% for guest in guests.all %}
+                    <div class="col-sm-6" style="margin-bottom:40px;">
+                        <div class="card">
+                          <div class="card-body">
+                              <div>
+                                  <h5 class="card-title"><b>{{ guest.title }}</b></h5>
+                                  <p class="card-text">{{ guest.summary }}...</p>
+                              </div>
+
+                              <br><br>
+
+                              <div id="card-footer">
+                                  <div style="float:left;">
+                                      <h6 class="card-subtitle mb-2 text-muted"><b>{{ guest.name }}</b></h6>
+                                      <h6 class="card-subtitle mb-2 text-muted">{{ guest.pub_date }}</h6>
+                                  </div>
+                                  <div style="float:right;">
+                                    <a href="{% url 'guestResult' guest.id %}" class="btn btn-dark">전체보기</a>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div style="text-align:right">
+                <a href="/guest/write" class="btn btn-primary">글쓰기</a>
+            </div>
+        <!--card blog container-->
+        </div>
+    <!--main-->
+    </div>
+    </div>>
+</body>
+</html>

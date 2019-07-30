@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+    {% include 'include/bootstrap.html' %}
+</head>
+<body>
+    {% include 'include/nav.html' %}
+    <div class="container">
+    <div class="main">
+        <h1> {{ blog.title }}</h1>
+        <p> {{ blog.pub_date }}</p>
+        <p> {{ blog.body }}</p>
+    </div>
+    </div>
+</body>
+</html>

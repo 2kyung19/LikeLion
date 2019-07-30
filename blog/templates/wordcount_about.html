@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wordcount:about</title>
+    {% include 'include/bootstrap.html' %}
+</head>
+<body>
+    {% include 'include/nav.html' %}
+    <div class="container">
+    <div class="main">
+        <h1>About</h1>
+
+        <p>안녕하세요, 이곳은 글자를 세 주는 워드카운트 웹페이지입니다.<br>여기에서 글자를 세세요.</p>
+
+        <a href="{% url 'wordcount' %}">이전 페이지로 돌아가기</a>
+    </div>
+    </div>
+</body>
+</html>

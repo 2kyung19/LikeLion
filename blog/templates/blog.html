@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>queryset</title>
+    {% include 'include/bootstrap.html' %}
+</head>
+<body>
+    {% include 'include/nav.html' %}
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                {% for blog in blogs.all %}
+                    <div class="col-sm-6" style="margin-bottom:40px;">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"><b>{{ blog.title }}</b></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ blog.pub_date }}</h6>
+                            <p class="card-text">{{ blog.summary }}...</p>
+
+                            <a href="{% url 'detail' blog.id %}" class="btn btn-dark">전체보기</a>
+                          </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        <!--card blog container-->
+        </div>
+    <!--main-->
+    </div>
+</body>
+</html>

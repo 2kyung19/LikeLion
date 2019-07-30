@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>guest:create</title>
+    {% include 'include/bootstrap.html' %}
+</head>
+<body>
+    {% include 'include/nav.html' %}
+    <div class="container">
+    <div class="main">
+        <div class="container">
+            <form action="{% url 'guestCreate' %}">
+                <h4>작성자 : </h4>
+                <input type="text" name="name">
+                <h4>제목 : </h4>
+                <input type="text" name="title">
+                <br><br>
+
+                <h4>본문 : </h4>
+                <textarea cols="40" rows="10" name="body"></textarea>
+
+                <br><br>
+                <input class="btn btn-dark" type="submit" value="제출하기">
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
