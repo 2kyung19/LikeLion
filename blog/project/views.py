@@ -15,9 +15,6 @@ def unicode(request):
     uni = ""
 
     for c in conv:
-        uni += (str(ord(c)) + " ")
-        print(c + str(ord(c)))
-
-    print(uni)
+        uni += ("%u"+str(hex(ord(c)))[2:])
 
     return render(request, 'unicode.html', {'text':text, 'conv':uni})
