@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+    {% include 'p_include/bootstrap.html' %}
+</head>
+<body>
+    {% include 'p_include/nav.html' %}
+    <div class="main">
+        <div class="container">
+            <div style="margin:20px;">
+                <form action="{% url 'unicode' %}">
+                    <textarea class="form-control font-weight-light" cols="100" rows="10" name="text"></textarea>
+
+                    <br>
+                    <button type="submit" class="btn btn-primary">Convert!</button>
+                </form>
+            </div>
+
+        <!--card blog container-->
+        </div>
+    <!--main-->
+    </div>
+</body>
+</html>

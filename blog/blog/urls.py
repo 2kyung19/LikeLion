@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import myapp.views
+import project.views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -33,6 +34,9 @@ urlpatterns = [
     path('guest/result/<int:guest_id>',myapp.views.guestResult,name="guestResult"),
     path('guest/create', myapp.views.guestCreate,name="guestCreate"),
     path('gallery/', myapp.views.gallery, name="gallery"),
+
+    path('project/',project.views.p_main, name="p_main"),
+    path('encoding/', project.views.unicode, name="unicode"),
 
 ]
 
